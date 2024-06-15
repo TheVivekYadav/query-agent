@@ -4,3 +4,4 @@ faiss-cpu
 pandas
 torch
 google-generativeai
+requests==2.30.0
