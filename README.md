@@ -6,7 +6,7 @@ This project implements a Natural Language Query Agent that answers questions ba
 ### Installation
 1. Clone the repository:
     
-    git clone [https://github.com/vishalmaurya850/query-agent.git]
+    git clone https://github.com/vishalmaurya850/query-agent.git
    <br>
     cd query-agent
     
