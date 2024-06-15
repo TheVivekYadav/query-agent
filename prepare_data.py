@@ -181,7 +181,7 @@ data ={
         }
       ]
     }
-  }
+  },
     {
   "_descriptorVersion": "0.0.1",  
   "datePublished": "2024-03-19T11:04:50.000Z",
@@ -223,7 +223,7 @@ data ={
       }
     ]
   }
-}
+},
     {
   "_descriptorVersion": "0.0.1",  
   "datePublished": "2024-03-19T11:04:50.000Z",
@@ -265,7 +265,7 @@ data ={
       }
     ]
   }
-}
+},
     {
   "_descriptorVersion": "0.0.1",  
   "datePublished": "2023-10-29T21:27:30",
@@ -323,7 +323,7 @@ data ={
       }
     ]
   }
-}
+},
     {
     "_descriptorVersion": "0.0.1",  
     "datePublished": "2023-12-11T06:26:58",
@@ -381,7 +381,7 @@ data ={
         }
       ]
     }
-  }
+  },
     {
     "_descriptorVersion": "0.0.1",  
     "datePublished": "2023-12-12T10:12:59",
@@ -440,7 +440,7 @@ data ={
         }
       ]
     }
-  }
+  },
     {
   "_descriptorVersion": "0.0.1",  
   "datePublished": "2023-09-27T16:12:57",
@@ -499,7 +499,7 @@ data ={
       }
     ]
   }
-}
+},
     {
   "_descriptorVersion": "0.0.1",  
   "datePublished": "2024-04-19T01:00:31.000Z",
@@ -541,7 +541,7 @@ data ={
       }
     ]
   }
-}
+},
 { "_descriptorVersion": "0.0.1",  
   "datePublished": "2024-03-12T06:52:19.000Z",
   "name": "Hermes 2 Pro Mistral 7B",
@@ -581,7 +581,7 @@ data ={
       }
     ]
   }
-       }
+},
    {
   "_descriptorVersion": "0.0.1",  
   "datePublished": "2023-08-24T21:39:59",
