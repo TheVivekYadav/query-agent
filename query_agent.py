@@ -76,7 +76,7 @@ with open('data/segments.json', 'r') as f:
   segments = json.load(f)
     
 class ConversationalAgent:
-    def _init_(self):
+    def __init__(self):
         self.context = []
 
     def query_index(self, query):
