@@ -72,6 +72,9 @@ answer, citations = generate_response_with_citations(query)
 print(f"Answer: {answer}")
 print(f"Citations: {citations}")
 
+with open('data/segments.json', 'r') as f:
+  segments = json.load(f)
+    
 class ConversationalAgent:
     def _init_(self):
         self.context = []
@@ -79,8 +82,7 @@ class ConversationalAgent:
     def query_index(self, query):
         query_embedding = model.encode([query], convert_to_tensor=True).numpy()
         _, indices = index.search(query_embedding, k=5)
-        with open('data/segments.json', 'r') as f:
-            segments = json.load(f)
+        
         retrieved_segments = [segments[i] for i in indices[0]]
         return retrieved_segments
 
@@ -89,10 +91,10 @@ class ConversationalAgent:
         self.context.extend(retrieved_segments)
         context = ' '.join(self.context[-10:])  # Use last 10 segments for context
         response = palm.generate_text(
-        model="models/text-bison-001",
-        prompt=f"Answer the following question based on the context provided:\n\nContext: {context}\n\nQuestion: {query}\n\nAnswer:",
-        max_output_tokens=200
-        )
+            model="models/text-bison-001",
+            prompt=f"Answer the following question based on the context provided:\n\nContext: {context}\n\nQuestion: {query}\n\nAnswer:",
+            max_output_tokens=200
+            )
         return response.result.strip()
 
 agent = ConversationalAgent()
