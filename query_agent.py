@@ -51,20 +51,20 @@ query = "What are some milestone model architectures and papers in the last few 
 response = generate_response(query)
 print(response)
 
-def generate_response_with_citations(query, retrieved_chunks):
-    context = " ".join(retrieved_chunks)
-    prompt = f"Context: {context}\n\nQuestion: {query}\nAnswer:"
-
+def generate_response_with_citations(query):
+    retrieved_segments = query_index(query)
+    context = ' '.join(retrieved_segments)
+    
     response = palm.generate_text(
         model="models/text-bison-001",
-        prompt=prompt,
-        max_tokens=150
-    ).result.strip()
-
-    # Include citations
-    citations = "\n".join([f"Citation: {chunk}" for chunk in retrieved_chunks])
-    return f"{response}\n\n{citations}"
-
+        prompt=f"Answer the following question based on the context provided:\n\nContext: {context}\n\nQuestion: {query}\n\nAnswer with references to the context:",
+        max_tokens=200
+    )
+    
+    answer = response.result.strip()
+    citations = {i: seg for i, seg in enumerate(retrieved_segments)}
+    return answer, citations
+    
 # Example query
 query = "What are the layers in a transformer block?"
 answer, citations = generate_response_with_citations(query)
