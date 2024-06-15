@@ -7,17 +7,18 @@ This project implements a Natural Language Query Agent that answers questions ba
 1. Clone the repository:
     
     git clone [https://github.com/vishalmaurya850/query-agent.git]
+   <br>
     cd query-agent
     
-2. Install the required packages:
+3. Install the required packages:
     
     pip install -r requirements.txt
     
-3. Prepare the data and create embeddings:
+4. Prepare the data and create embeddings:
     
     python prepare_data.py
     
-4. Run the query and generate response:
+5. Run the query and generate response:
     
     python query_agent.py
     
