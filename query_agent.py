@@ -7,10 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/109xmBHJrJ5rovd52aW6qXzNdagG66W1Z
 """
 
-pip install sentence-transformers
-
-pip install faiss-cpu
-
 import google.generativeai as palm
 palm.configure(api_key='AIzaSyD8C0qP40JCjPLdz0VM8Wk4Yy5AJ9rWPIM')
 import json
