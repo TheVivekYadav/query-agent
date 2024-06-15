@@ -59,7 +59,7 @@ def generate_response_with_citations(query):
     response = palm.generate_text(
         model="models/text-bison-001",
         prompt=f"Answer the following question based on the context provided:\n\nContext: {context}\n\nQuestion: {query}\n\nAnswer with references to the context:",
-        max_tokens=200
+        max_output_tokens=200
     )
     
     answer = response.result.strip()
