@@ -7,10 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1jHSDskOgxQvvGkHu3jbAZrOk-PEjp-GC
 """
 
-pip install sentence-transformers
-
-pip install faiss-cpu
-
 import os
 import json
 import torch
